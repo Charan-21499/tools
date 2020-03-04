@@ -15,8 +15,15 @@ else
 echo "'format check_port ip_range'"
 fi
 if [ -e /root/Desktop/$ip/$y.xml ]; then 
-	diff /root/Desktop/$ip/$y.xml /root/Desktop/$ip/$d.xml > /root/Desktop/$ip/diff.xml
+	diff /root/Desktop/$ip/$y.xml /root/Desktop/$ip/$d.xml > /root/Desktop/$ip/diff.txt
 fi
+
+
+#usage
+#./check_port.sh $iprange
+#./check_port.sh 127.0.0.1/24
+
+# a new file will be create on desktop with the report and if any differences are found from previous scan the difference will be store in a file name diff.txt in the same directory
 
 
 
